@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Demonstração de Vitrine</title>
+  <meta name="description" content="Vitrine online da Sousa Fix — navegue pelo catálogo de componentes protéticos, linha digital e linha de solda.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:        #00A445;
+      --green-dark:   #007530;
+      --gray-900:     #232323;
+      --gray-800:     #3A3A3A;
+      --gray-200:     #E6E6E6;
+      --white:        #FFFFFF;
+      --header-h:     80px;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      -webkit-overflow-scrolling: auto;
+      touch-action: none;
+    }
+
+    @supports (height: 100dvh) {
+      html, body { height: 100dvh; }
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-900);
+      background: var(--white);
+    }
+
+    :focus-visible { outline: 3px solid var(--green); outline-offset: 2px; border-radius: 6px; }
+
+    /* ===== HEADER (80px, padrão do site) ===== */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--header-h); width: 100%;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(35,35,35,0.08);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .logo-link { display: flex; align-items: center; }
+    .logo-link img { height: 46px; width: auto; object-fit: contain; }
+
+    nav { display: flex; align-items: center; gap: 2px; }
+    nav a {
+      position: relative; font-size: 0.85rem; font-weight: 600; color: var(--gray-800);
+      padding: 8px 12px; border-radius: 7px; transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    nav a:hover { color: var(--green-dark); background: rgba(0,164,69,0.07); }
+
+    .nav-vitrine {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 1.5px solid var(--green); color: var(--green-dark) !important;
+      padding: 7px 14px !important; border-radius: 50px;
+    }
+    .nav-vitrine[aria-current="page"] { background: var(--green); color: var(--white) !important; }
+    .nav-vitrine svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .btn-nav {
+      background: var(--green); color: var(--white) !important;
+      padding: 9px 20px; border-radius: 50px;
+      font-weight: 600; font-size: 0.85rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-nav:hover { background: var(--green-dark); color: var(--white) !important; transform: translateY(-1px); }
+
+    .menu-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 6px; border: none; background: none;
+    }
+    .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--gray-900); border-radius: 2px; }
+
+    .mobile-nav {
+      display: none; position: fixed; top: var(--header-h); left: 0; right: 0;
+      background: var(--white); padding: 14px 22px 20px;
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: 0 8px 24px rgba(35,35,35,0.09); z-index: 999;
+    }
+    .mobile-nav.open { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-nav a { padding: 12px 16px; font-weight: 600; color: var(--gray-900); border-radius: 8px; }
+    .mobile-nav a:hover { background: #F4F4F4; color: var(--green-dark); }
+    .mobile-nav .nav-vitrine { justify-content: center; }
+    .mobile-nav .btn-nav { margin-top: 6px; text-align: center; }
+
+    @media (max-width: 900px) {
+      nav > a:not(.btn-nav):not(.nav-vitrine) { display: none; }
+      .nav-vitrine { display: none; }
+      .menu-toggle { display: flex; }
+      .header-inner nav > .btn-nav { display: none; }
+    }
+    @media (max-width: 480px) {
+      .logo-link img { height: 40px; }
+    }
+
+    /* ===== IFRAME DA VITRINE ===== */
+    .vitrine-iframe {
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 80px);
+      border: none;
+      display: block;
+      z-index: 1;
+    }
+    @supports (height: 100dvh) {
+      .vitrine-iframe { height: calc(100dvh - 80px); }
+    }
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+      .vitrine-iframe { height: calc(100vh - 80px - env(safe-area-inset-bottom)); }
+      @supports (height: 100dvh) {
+        .vitrine-iframe { height: calc(100dvh - 80px - env(safe-area-inset-bottom)); }
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Sousa Fix Tecnologia em Implantes — página inicial">
+        <img src="assets/logo.png" alt="Sousa Fix Tecnologia em Implantes — Logo">
+      </a>
+
+      <nav aria-label="Menu principal">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="vitrine.html" class="nav-vitrine" aria-current="page" aria-label="Vitrine online (página atual)">
+          <svg viewBox="0 0 24 24"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+          Vitrine
+        </a>
+        <a href="index.html" class="btn-nav">Voltar ao site</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+    <a href="index.html#inicio">Início</a>
+    <a href="index.html#sobre">Sobre</a>
+    <a href="index.html#produtos">Produtos</a>
+    <a href="index.html#contato">Contato</a>
+    <a href="vitrine.html" class="nav-vitrine" aria-current="page">
+      <svg viewBox="0 0 24 24"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+      Vitrine
+    </a>
+    <a href="index.html" class="btn-nav">Voltar ao site</a>
+  </div>
+
+  <!-- ===== IFRAME DA VITRINE ===== -->
+  <iframe
+    id="vitrineFrame"
+    src="https://sousafix.egestor.com.br/vitrine/"
+    class="vitrine-iframe"
+    title="Vitrine online — Sousa Fix"
+    allow="payment"
+    allowfullscreen>
+  </iframe>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mobileNav.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Ajuste dinâmico do iframe ao redimensionar a janela (header 80px fixo)
+    function adjustIframe() {
+      const iframe = document.getElementById('vitrineFrame');
+      if (!iframe) return;
+      const headerH = 80;
+      const availableH = window.innerHeight - headerH;
+      iframe.style.height = Math.max(availableH, 200) + 'px';
+    }
+    adjustIframe();
+    window.addEventListener('resize', adjustIframe);
+    window.addEventListener('orientationchange', () => setTimeout(adjustIframe, 300));
+  </script>
+</body>
+</html>

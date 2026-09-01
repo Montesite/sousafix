@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sousa Fix Tecnologia em Implantes</title>
+  <meta name="description" content="Sousa Fix — componentes protéticos, linha digital e linha de solda para implantodontia e prótese dentária. Qualidade, confiança e atendimento próximo para todo o Brasil.">
+  <meta name="author" content="Sousa Fix Tecnologia em Implantes">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#00A445">
+  <meta name="keywords" content="componentes protéticos, prótese sobre implante, Ti Base, Scan Body, análogo, UCLA, mini pilar, linha digital, linha de solda, implantodontia, laboratório de prótese, Sousa Fix">
+
+  <link rel="canonical" href="https://www.sousafix.com.br/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sousafix.com.br/">
+  <meta property="og:title" content="Sousa Fix Tecnologia em Implantes">
+  <meta property="og:description" content="Sousa Fix — componentes protéticos, linha digital e linha de solda para implantodontia e prótese dentária. Qualidade, confiança e atendimento próximo para todo o Brasil.">
+  <meta property="og:image" content="https://www.sousafix.com.br/assets/logo.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Sousa Fix Tecnologia em Implantes">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sousa Fix Tecnologia em Implantes">
+  <meta name="twitter:description" content="Sousa Fix — componentes protéticos, linha digital e linha de solda para implantodontia e prótese dentária.">
+  <meta name="twitter:image" content="https://www.sousafix.com.br/assets/logo.png">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-bg.jpg" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:        #00A445;
+      --green-dark:   #007530;
+      --green-darker: #005A26;
+      --green-light:  #E8F7EE;
+      --green-mist:   #F2FAF5;
+      --gray-900:     #232323;
+      --gray-800:     #3A3A3A;
+      --gray-600:     #666666;
+      --gray-400:     #9A9A9A;
+      --gray-200:     #E6E6E6;
+      --gray-100:     #F4F4F4;
+      --white:        #FFFFFF;
+      --accent:       #00C853;
+      --text:         #232323;
+      --text-light:   #666666;
+      --shadow-sm:    0 4px 14px rgba(0,0,0,0.07);
+      --shadow-md:    0 12px 32px rgba(0,0,0,0.10);
+      --radius:       16px;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 96px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text); background: var(--white);
+      overflow-x: hidden; line-height: 1.6;
+      opacity: 0; transition: opacity 0.5s ease;
+    }
+    body.loaded { opacity: 1; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== ACCESSIBILITY ===== */
+    :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; border-radius: 6px; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 99999;
+      background: var(--green); color: var(--white); padding: 10px 18px;
+      border-radius: 8px; font-weight: 600; transition: top 0.2s;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* ===== HEADER ===== */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(35,35,35,0.08);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      transition: box-shadow 0.3s;
+    }
+    #header.scrolled { box-shadow: 0 6px 24px rgba(0,0,0,0.10); }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 84px; gap: 16px;
+    }
+    .logo-link { display: flex; align-items: center; transition: transform 0.2s; }
+    .logo-link:hover { transform: scale(1.03); }
+    .logo-link img { height: 56px; width: auto; object-fit: contain; }
+
+    nav { display: flex; align-items: center; gap: 2px; }
+    nav a {
+      position: relative; font-size: 0.875rem; font-weight: 600; color: var(--gray-800);
+      padding: 8px 13px; border-radius: 7px; transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    nav a:hover { color: var(--green-dark); background: rgba(0,164,69,0.07); }
+    nav a:not(.btn-nav)::after {
+      content: ''; position: absolute; left: 13px; right: 13px; bottom: 4px;
+      height: 2px; background: var(--green); border-radius: 2px;
+      transform: scaleX(0); transform-origin: center; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1);
+    }
+    nav a:not(.btn-nav):hover::after,
+    nav a.nav-active:not(.btn-nav)::after { transform: scaleX(1); }
+
+    .btn-nav {
+      background: var(--green); color: var(--white) !important;
+      padding: 9px 20px; border-radius: 50px;
+      font-weight: 600; font-size: 0.875rem;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .btn-nav:hover { background: var(--green-dark); color: var(--white) !important; transform: translateY(-1px); }
+
+    .nav-vitrine {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 1.5px solid var(--green); color: var(--green-dark) !important;
+      padding: 7px 14px !important; border-radius: 50px;
+    }
+    .nav-vitrine:hover { background: var(--green); color: var(--white) !important; }
+    .nav-vitrine::after { display: none !important; }
+    .nav-vitrine svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .mobile-nav .nav-vitrine { display: inline-flex; justify-content: center; border-color: var(--green); }
+
+    .menu-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 6px; border: none; background: none;
+    }
+    .menu-toggle span {
+      display: block; width: 24px; height: 2px;
+      background: var(--gray-900); border-radius: 2px; transition: all 0.3s;
+    }
+    .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none; position: fixed; top: 84px; left: 0; right: 0;
+      background: var(--white); padding: 16px 24px 24px;
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: 0 8px 24px rgba(35,35,35,0.09); z-index: 999;
+    }
+    .mobile-nav.open { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-nav a {
+      padding: 12px 16px; font-weight: 600; color: var(--text);
+      border-radius: 8px; transition: background 0.2s, color 0.2s;
+    }
+    .mobile-nav a:hover { background: var(--gray-100); color: var(--green-dark); }
+    .mobile-nav .btn-nav { margin-top: 8px; text-align: center; }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative; overflow: hidden; padding: 140px 0 120px;
+      background-image: url('assets/img/hero-bg.jpg');
+      background-size: cover; background-position: center;
+      color: var(--white);
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(115deg, rgba(0,46,24,0.78) 15%, rgba(0,70,36,0.55) 55%, rgba(0,110,58,0.40) 100%);
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -200px; left: -140px;
+      width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,200,83,0.28), transparent 68%);
+    }
+    .hero .container { position: relative; z-index: 1; display: flex; align-items: center; gap: 56px; }
+    .hero-content { max-width: 680px; flex: 1; }
+
+    .hero-visual {
+      flex: 1; max-width: 430px; position: relative; display: none;
+    }
+    .hero-visual img {
+      width: 100%; height: auto; border-radius: 24px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.40);
+      border: 4px solid rgba(255,255,255,0.18);
+      aspect-ratio: 4/5; object-fit: cover;
+    }
+    .hero-visual-badge {
+      position: absolute; left: -18px; bottom: 28px;
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.96); color: var(--gray-900);
+      font-size: 0.82rem; font-weight: 600;
+      padding: 12px 18px; border-radius: 14px; box-shadow: var(--shadow-md);
+    }
+    .hero-visual-badge svg { flex-shrink: 0; }
+
+    @media (min-width: 1024px) { .hero-visual { display: block; } }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.30);
+      padding: 7px 16px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 700; color: var(--white); letter-spacing: 0.06em;
+      backdrop-filter: blur(8px); margin-bottom: 24px;
+    }
+    .hero-badge svg { stroke: var(--accent); }
+
+    .hero h1 {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: clamp(2.4rem, 5.4vw, 4.1rem);
+      font-weight: 800; color: var(--white); line-height: 1.08;
+      margin-bottom: 18px; text-shadow: 0 4px 30px rgba(0,0,0,0.30);
+    }
+    .hero h1 span { color: var(--green); }
+
+    .hero-slogan {
+      font-size: 1.15rem; color: rgba(255,255,255,0.92); font-weight: 600;
+      margin-bottom: 12px; font-style: italic;
+    }
+    .hero h2 {
+      font-size: 1.02rem; font-weight: 400; color: rgba(255,255,255,0.86);
+      max-width: 620px; line-height: 1.7; margin-bottom: 34px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: var(--white); color: var(--green-dark) !important;
+      font-weight: 700; font-size: 0.95rem;
+      padding: 14px 30px; border-radius: 50px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(0,0,0,0.26); background: #F2FFF6; }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.55);
+      color: var(--white) !important; font-weight: 600; font-size: 0.95rem;
+      padding: 14px 30px; border-radius: 50px;
+      backdrop-filter: blur(8px);
+      transition: transform 0.25s, background 0.25s, border-color 0.25s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.22); border-color: var(--white); transform: translateY(-3px); }
+
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 40px;
+      margin-top: 52px; padding-top: 34px;
+      border-top: 1px solid rgba(255,255,255,0.22);
+    }
+    .hero-stat strong {
+      display: block; font-family: 'Baloo 2', sans-serif;
+      font-size: 1.8rem; font-weight: 800; color: var(--green);
+    }
+    .hero-stat span { font-size: 0.85rem; color: rgba(255,255,255,0.85); font-weight: 500; }
+
+    /* ===== SECTION COMMON ===== */
+    section { padding: 96px 0; }
+    .section-header { margin-bottom: 56px; }
+    .section-header.center { text-align: center; }
+    .section-tag {
+      display: block; width: max-content; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--green-dark); background: rgba(0,164,69,0.09);
+      padding: 5px 14px; border-radius: 50px; margin-bottom: 14px;
+    }
+    .section-header.center .section-tag { margin-left: auto; margin-right: auto; }
+    .section-title {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-weight: 800; color: var(--gray-900); line-height: 1.25; margin-bottom: 16px;
+      position: relative; display: inline-block;
+    }
+    .section-title span { color: var(--green); }
+    .section-title::after {
+      content: ''; position: absolute; bottom: -8px; left: 0;
+      height: 3px; width: 0;
+      background: linear-gradient(90deg, var(--green), var(--accent));
+      border-radius: 3px; transition: width 0.9s cubic-bezier(0.22,1,0.36,1) 0.2s;
+    }
+    .section-title.line-active::after { width: 56px; }
+    .section-header.center .section-title::after { left: 50%; transform: translateX(-50%); }
+    .section-subtitle {
+      font-size: 1.05rem; color: var(--text-light); max-width: 600px; line-height: 1.75;
+    }
+    .section-header.center .section-subtitle { margin: 0 auto; }
+
+    /* ===== SOBRE / HISTÓRIA ===== */
+    .sobre {
+      position: relative; overflow: hidden;
+      background-image: url('assets/img/laboratorio.jpg');
+      background-size: cover; background-position: center;
+    }
+    .sobre::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(255,255,255,0.93);
+    }
+    .sobre .container { position: relative; z-index: 1; }
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .sobre-text .section-subtitle { max-width: none; margin-bottom: 16px; }
+    .sobre-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .sobre-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-light); color: var(--green-dark);
+      font-size: 0.85rem; font-weight: 600; padding: 9px 16px; border-radius: 50px;
+    }
+    .sobre-badge svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .sobre-visual {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow-md); min-height: 380px;
+      background-image: url('assets/img/sobre-bg.jpg');
+      background-size: cover; background-position: center;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .sobre-visual::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,60,30,0.30) 0%, rgba(0,60,30,0.10) 55%, rgba(0,60,30,0.65) 100%);
+    }
+    .sobre-visual .splash-icon { width: 190px; height: 190px; opacity: 0.95; position: relative; z-index: 1; }
+    .sobre-visual .splash-icon svg { width: 100%; height: 100%; }
+    .sobre-visual-card {
+      position: absolute; left: 24px; bottom: 24px; z-index: 1;
+      background: rgba(255,255,255,0.94); backdrop-filter: blur(8px);
+      border-radius: 14px; padding: 16px 22px; box-shadow: var(--shadow-md);
+    }
+    .sobre-visual-card strong { display: block; font-size: 1.5rem; color: var(--green-dark); font-family: 'Baloo 2', sans-serif; }
+    .sobre-visual-card span { font-size: 0.8rem; color: var(--text-light); }
+
+    /* ===== MISSÃO / VISÃO / VALORES ===== */
+    .missao-visao {
+      position: relative; overflow: hidden;
+      background-image: url('assets/img/missao-bg.jpg');
+      background-size: cover; background-position: center;
+      color: var(--white);
+    }
+    .missao-visao::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(150deg, rgba(0,90,38,0.94) 0%, rgba(0,117,48,0.88) 60%, rgba(0,164,69,0.86) 100%);
+    }
+    .missao-visao .container { position: relative; z-index: 1; }
+    .missao-visao .section-tag { background: rgba(255,255,255,0.12); color: #66FFA6; }
+    .missao-visao .section-title { color: var(--white); }
+    .missao-visao .section-title::after { background: linear-gradient(90deg, #66FFA6, var(--accent)); }
+    .missao-visao .section-subtitle { color: rgba(255,255,255,0.80); }
+    .mv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .mv-card {
+      background: var(--white); border: 1px solid rgba(255,255,255,0.16);
+      border-radius: var(--radius); padding: 32px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .mv-card:hover { transform: translateY(-5px); background: var(--white); }
+    .mv-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(0,200,83,0.12); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .mv-icon svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .mv-card h3 { font-family: 'Baloo 2', sans-serif; font-size: 1.2rem; margin-bottom: 10px; color: var(--accent); }
+    .mv-card p { font-size: 0.9rem; color: var(--accent); line-height: 1.7; }
+    .valores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .valor-card {
+      background: var(--white); border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 14px; padding: 22px;
+    }
+    .valor-card h4 { display: flex; align-items: center; gap: 10px; font-size: 0.98rem; color: var(--accent); margin-bottom: 8px; }
+    .valor-card h4 svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .valor-card p { font-size: 0.85rem; color: var(--accent); line-height: 1.7; }
+
+    /* ===== ATUAÇÃO / LINHAS ===== */
+    .atuacao {
+      position: relative; background-color: var(--gray-100);
+      background-image: url('assets/img/atuacao-bg.jpg');
+      background-size: cover; background-position: center;
+    }
+    .atuacao::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(247,250,248,0.90);
+    }
+    .atuacao .container { position: relative; z-index: 1; }
+    .linhas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .linha-card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--radius); padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      display: flex; flex-direction: column;
+    }
+    .linha-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--green); }
+    .linha-icon {
+      width: 58px; height: 58px; border-radius: 16px;
+      background: var(--green-light); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .linha-icon svg { width: 30px; height: 30px; stroke: var(--green-dark); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .linha-card h3 { font-family: 'Baloo 2', sans-serif; font-size: 1.2rem; color: var(--gray-900); margin-bottom: 12px; }
+    .linha-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; margin-bottom: 18px; flex: 1; }
+    .linha-list { display: flex; flex-direction: column; gap: 8px; }
+    .linha-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.86rem; color: var(--gray-800); }
+    .linha-list svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 3px; }
+
+    .atuacao-banner {
+      position: relative; overflow: hidden; border-radius: 22px;
+      margin-top: 40px; min-height: 260px; display: flex; align-items: flex-end;
+      box-shadow: var(--shadow-md);
+    }
+    .atuacao-banner img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
+    }
+    .atuacao-banner::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.60) 45%, rgba(0,0,0,0.80) 100%),
+        linear-gradient(180deg, rgba(0,46,24,0.30) 0%, rgba(0,70,36,0.55) 55%, rgba(0,90,46,0.85) 100%);
+    }
+    .atuacao-banner-content {
+      position: relative; z-index: 1; padding: 36px; max-width: 620px; color: var(--white);
+    }
+    .atuacao-banner-content .section-tag { background: rgba(255,255,255,0.14); color: #66FFA6; margin-bottom: 12px; }
+    .atuacao-banner-content h3 { font-family: 'Baloo 2', sans-serif; font-size: 1.35rem; color: var(--white); margin-bottom: 10px; }
+    .atuacao-banner-content p { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.7; }
+
+    /* ===== PRODUTOS ===== */
+    .produtos {
+      position: relative; overflow: hidden;
+      background-image: url('assets/img/componentes-analogicos.jpg');
+      background-size: cover; background-position: center;
+    }
+    .produtos::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(255,255,255,0.94);
+    }
+    .produtos .container { position: relative; z-index: 1; }
+    .produtos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .produto-card {
+      background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius);
+      padding: 32px; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .produto-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--green); }
+    .produto-icon {
+      width: 54px; height: 54px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--green), var(--accent));
+      display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+    }
+    .produto-icon svg { width: 26px; height: 26px; stroke: var(--white); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .produto-card h3 { font-family: 'Baloo 2', sans-serif; font-size: 1.12rem; color: var(--gray-900); margin-bottom: 10px; }
+    .produto-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+    .produto-card-img { padding: 0 0 32px; overflow: hidden; }
+    .produto-card-img .produto-img { height: 190px; overflow: hidden; }
+    .produto-card-img .produto-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .produto-card-img:hover .produto-img img { transform: scale(1.06); }
+    .produto-card-img .produto-icon { position: relative; z-index: 2; margin: -20px 0 14px 24px; }
+    .produtos-cta { text-align: center; margin-top: 48px; }
+    .produtos-cta p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; }
+
+    /* ===== VITRINE ONLINE (CTA) ===== */
+    .vitrine-promo {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #001C0E 0%, #002E18 55%, #013D20 100%);
+    }
+    .vitrine-promo::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(circle, rgba(107,240,165,0.14) 1.5px, transparent 1.5px);
+      background-size: 26px 26px;
+    }
+    .vitrine-promo::after {
+      content: ''; position: absolute; top: -160px; right: -140px;
+      width: 460px; height: 460px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,200,83,0.30), transparent 70%);
+      pointer-events: none;
+    }
+    .vitrine-promo .container { position: relative; z-index: 1; }
+    .vitrine-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .vitrine-promo .section-tag { background: rgba(107,240,165,0.14); color: #66FFA6; }
+    .vitrine-promo .section-title { color: var(--white); }
+    .vitrine-promo .section-title span { color: #66FFA6; }
+    .vitrine-txt p.section-subtitle { color: rgba(255,255,255,0.78); max-width: 560px; margin-bottom: 28px; }
+    .vitrine-feats { display: flex; flex-direction: column; gap: 13px; margin-bottom: 32px; }
+    .vitrine-feats li { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.88); font-size: 0.92rem; }
+    .vitrine-feats li svg { width: 18px; height: 18px; flex-shrink: 0; stroke: #66FFA6; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .vitrine-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-vitrine {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: var(--green); color: var(--white) !important;
+      font-weight: 700; font-size: 0.95rem;
+      padding: 14px 30px; border-radius: 50px;
+      box-shadow: 0 10px 26px rgba(0,164,69,0.35);
+      transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+    }
+    .btn-vitrine:hover { background: var(--green-dark); transform: translateY(-3px); box-shadow: 0 14px 32px rgba(0,164,69,0.45); }
+
+    .vitrine-mock { position: relative; }
+    .vitrine-browser {
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.45), 0 0 0 1px rgba(107,240,165,0.20);
+    }
+    .vitrine-browser-bar {
+      height: 40px; background: rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+      display: flex; align-items: center; gap: 6px; padding: 0 14px;
+    }
+    .vitrine-browser-bar span.dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .vitrine-browser-url {
+      flex: 1; margin-left: 8px;
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 6px; padding: 5px 12px;
+      font-size: 0.68rem; color: rgba(255,255,255,0.4);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .vitrine-browser-content {
+      position: relative; height: 300px;
+      background: linear-gradient(135deg, #012B16, #014B27);
+      display: flex; align-items: center; justify-content: center; text-align: center;
+    }
+    .vitrine-browser-content .vb-icon {
+      width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 14px;
+      background: rgba(107,240,165,0.14); border: 2px solid rgba(107,240,165,0.4);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .vitrine-browser-content .vb-icon svg { width: 30px; height: 30px; stroke: #66FFA6; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .vitrine-browser-content strong { display: block; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); margin-bottom: 3px; }
+    .vitrine-browser-content span.sub { display: block; font-size: 0.72rem; color: rgba(255,255,255,0.45); margin-bottom: 20px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .vitrine-browser-content .vb-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green); color: var(--white);
+      font-weight: 700; font-size: 0.84rem;
+      padding: 10px 22px; border-radius: 50px; text-decoration: none;
+      box-shadow: 0 4px 18px rgba(0,164,69,0.4);
+      transition: background 0.25s, transform 0.25s;
+    }
+    .vitrine-browser-content .vb-cta:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .vitrine-mock-overlay { position: absolute; inset: 0; z-index: 2; }
+    .vitrine-mock-overlay a { display: block; width: 100%; height: 100%; }
+
+    .vitrine-float {
+      position: absolute; bottom: -16px; left: -16px;
+      background: var(--green-darker); border: 1px solid rgba(107,240,165,0.35);
+      border-radius: 14px; padding: 12px 18px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.78rem; font-weight: 700; color: var(--white);
+      box-shadow: 0 8px 26px rgba(0,0,0,0.35);
+    }
+    .vitrine-float svg { width: 16px; height: 16px; stroke: #66FFA6; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+
+    @media (max-width: 960px) {
+      .vitrine-grid { grid-template-columns: 1fr; gap: 44px; }
+      .vitrine-float { display: none; }
+    }
+    @media (max-width: 480px) {
+      .vitrine-btns { flex-direction: column; }
+      .vitrine-btns a { width: 100%; justify-content: center; }
+    }
+
+    /* ===== DEPOIMENTOS ===== */
+    .depoimentos { background: var(--gray-100); }
+    .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .depoimento-card {
+      background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius);
+      padding: 28px; display: flex; flex-direction: column; gap: 18px;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .depoimento-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--green); }
+    .depoimento-quote-icon {
+      width: 42px; height: 42px; border-radius: 12px;
+      background: var(--green-light); display: flex; align-items: center; justify-content: center;
+    }
+    .depoimento-quote-icon svg { width: 20px; height: 20px; stroke: var(--green-dark); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .depoimento-text { font-size: 0.92rem; color: var(--gray-800); line-height: 1.7; font-style: italic; flex: 1; }
+    .depoimento-author { display: flex; align-items: center; gap: 12px; }
+    .depoimento-avatar {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--green), var(--accent)); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 0.95rem;
+    }
+    .depoimento-author strong { display: block; font-size: 0.9rem; color: var(--gray-900); }
+    .depoimento-author span { font-size: 0.8rem; color: var(--text-light); }
+
+    /* ===== CTA WHATSAPP ===== */
+    .cta-wa {
+      position: relative; overflow: hidden;
+      background-image: url('assets/img/cta-bg.jpg');
+      background-size: cover; background-position: center;
+      color: var(--white); text-align: center;
+    }
+    .cta-wa::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(115deg, rgba(0,46,24,0.82) 20%, rgba(0,70,36,0.62) 60%, rgba(0,120,64,0.50) 100%);
+    }
+    .cta-wa .container { position: relative; z-index: 1; }
+    .cta-wa h2 { font-family: 'Baloo 2', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+    .cta-wa p { color: rgba(255,255,255,0.86); max-width: 560px; margin: 0 auto 30px; font-size: 1rem; }
+    .cta-wa .btn-primary { background: var(--white); }
+
+    /* ===== CONTATO ===== */
+    .contato {
+      position: relative; overflow: hidden;
+      background-image: url('assets/img/contato-bg.jpg');
+      background-size: cover; background-position: center;
+    }
+    .contato::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(115deg, rgba(0,46,24,0.85) 10%, rgba(0,80,42,0.70) 55%, rgba(0,120,64,0.55) 100%);
+    }
+    .contato .container { position: relative; z-index: 1; }
+    .contato-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: start; }
+    .contato .section-tag { background: rgba(255,255,255,0.14); color: #66FFA6; }
+    .contato .section-title { color: var(--white); }
+    .contato .section-title span { color: #66FFA6; }
+    .contato .section-subtitle { color: rgba(255,255,255,0.85); }
+    .contato-info h3 { color: var(--white); }
+    .contato-info > p { color: rgba(255,255,255,0.78); }
+    .contato-info-list { display: flex; flex-direction: column; gap: 14px; }
+    .contato-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: 14px; padding: 18px 20px; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .contato-item:hover { border-color: var(--green); box-shadow: var(--shadow-sm); }
+    .contato-item .ci-icon {
+      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+      background: var(--green-light); display: flex; align-items: center; justify-content: center;
+    }
+    .contato-item .ci-icon svg { width: 22px; height: 22px; stroke: var(--green-dark); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .contato-item strong { display: block; font-size: 0.86rem; color: var(--text-light); font-weight: 600; margin-bottom: 3px; }
+    .contato-item span, .contato-item a { font-size: 0.95rem; color: var(--gray-900); font-weight: 600; }
+    .contato-item a:hover { color: var(--green-dark); text-decoration: underline; }
+
+    .contato-card {
+      background: linear-gradient(150deg, #005A26, #00A445); color: var(--white);
+      border-radius: 20px; padding: 38px; box-shadow: var(--shadow-md);
+    }
+    .contato-card h3 { font-family: 'Baloo 2', sans-serif; font-size: 1.4rem; margin-bottom: 10px; }
+    .contato-card > p { font-size: 0.92rem; color: rgba(255,255,255,0.86); margin-bottom: 24px; }
+    .contato-card form { display: flex; flex-direction: column; gap: 14px; }
+    .contato-card label { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.9); }
+    .contato-card input,
+    .contato-card textarea {
+      width: 100%; padding: 13px 16px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.30); background: rgba(255,255,255,0.10);
+      color: var(--white); font-family: inherit; font-size: 0.92rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .contato-card input::placeholder, .contato-card textarea::placeholder { color: rgba(255,255,255,0.60); }
+    .contato-card input:focus, .contato-card textarea:focus {
+      outline: none; border-color: #66FFA6; background: rgba(255,255,255,0.16);
+    }
+    .contato-card textarea { resize: vertical; min-height: 110px; }
+    .contato-card .btn-primary { justify-content: center; width: 100%; background: var(--white); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0F2817; color: rgba(255,255,255,0.75);
+      padding-top: 64px; font-size: 0.9rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 44px; }
+    .footer-brand .footer-logo { display: flex; align-items: center; margin-bottom: 18px; }
+    .footer-brand .footer-logo img { height: 42px; width: auto; object-fit: contain; }
+    .footer-brand p { max-width: 420px; line-height: 1.7; color: rgba(255,255,255,0.72); }
+    .footer-brand .social { display: flex; gap: 12px; margin-top: 22px; }
+    .footer-brand .social a {
+      width: 42px; height: 42px; border-radius: 12px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14);
+      display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s;
+    }
+    .footer-brand .social a:hover { background: var(--green); transform: translateY(-2px); }
+    .footer-brand .social svg { width: 20px; height: 20px; stroke: var(--white); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .footer-col h4 { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); margin-bottom: 18px; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { color: rgba(255,255,255,0.72); transition: color 0.2s; }
+    .footer-col a:hover { color: #66FFA6; }
+    .footer-col li { display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+    .footer-col svg { width: 16px; height: 16px; stroke: #66FFA6; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 3px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 22px 0; display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: space-between; align-items: center; font-size: 0.8rem; color: rgba(255,255,255,0.55);
+    }
+
+    /* ===== WHATSAPP FLUTUANTE ===== */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 9000;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+    .wa-float:hover { box-shadow: 0 6px 24px rgba(37,211,102,0.5); transform: scale(1.05); }
+    .wa-float svg { width: 30px; height: 30px; fill: var(--white); }
+
+    /* ===== REVEAL ===== */
+    .reveal-up    { opacity: 0; transform: translateY(32px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .reveal-right { opacity: 0; transform: translateX(40px);  transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+    .reveal-scale { opacity: 0; transform: scale(0.88);       transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
+    .revealed { opacity: 1 !important; transform: none; }
+    .delay-1 { transition-delay: 0.08s !important; }
+    .delay-2 { transition-delay: 0.16s !important; }
+    .delay-3 { transition-delay: 0.24s !important; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal-up, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ===== PARALLAX ===== */
+    @media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+      .hero, .sobre, .missao-visao, .atuacao, .produtos, .cta-wa, .contato {
+        background-attachment: fixed;
+      }
+    }
+
+    /* ===== EFEITOS ===== */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 4px; width: 0%;
+      background: linear-gradient(90deg, var(--green), var(--accent));
+      z-index: 1002; pointer-events: none;
+    }
+
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(26px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes heroFadeScale {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes heroFloat {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-12px); }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-badge, .hero h1, .hero-slogan, .hero h2, .hero-actions, .hero-stats {
+        opacity: 0;
+        animation: heroFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
+      }
+      .hero-badge   { animation-delay: 0.10s; }
+      .hero h1      { animation-delay: 0.20s; }
+      .hero-slogan  { animation-delay: 0.30s; }
+      .hero h2      { animation-delay: 0.40s; }
+      .hero-actions { animation-delay: 0.50s; }
+      .hero-stats   { animation-delay: 0.60s; }
+      .hero-visual {
+        opacity: 0;
+        animation: heroFadeScale 0.8s cubic-bezier(0.22,1,0.36,1) 0.35s both,
+                   heroFloat 5.5s ease-in-out 1.4s infinite;
+      }
+      .wa-float::before { animation: waPulse 2.2s ease-out infinite; }
+    }
+    @keyframes waPulse {
+      0%   { transform: scale(0.9); opacity: 1; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+    .wa-float::before {
+      content: ''; position: absolute; inset: -6px; border-radius: 50%;
+      border: 3px solid rgba(37,211,102,0.55); pointer-events: none;
+    }
+
+    .produto-card.tilt, .linha-card.tilt {
+      transition: box-shadow 0.3s, border-color 0.3s;
+      will-change: transform;
+    }
+
+    #backTop {
+      position: fixed; right: 28px; bottom: 104px; z-index: 8999;
+      width: 48px; height: 48px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--white); color: var(--green-dark);
+      border: 1px solid var(--gray-200); cursor: pointer;
+      box-shadow: var(--shadow-md);
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+    }
+    #backTop svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    #backTop.show { opacity: 1; visibility: visible; transform: none; }
+    #backTop:hover { background: var(--green); color: var(--white); transform: translateY(-3px); }
+
+    /* ===== RESPONSIVO ===== */
+    /* Telas grandes / Full HD / Widescreen */
+    @media (min-width: 1400px) {
+      .container { max-width: 1300px; }
+      section { padding: 112px 0; }
+      .hero { padding: 152px 0 132px; }
+      .hero-visual { max-width: 470px; }
+      .hero h1 { font-size: clamp(2.6rem, 4.6vw, 4.6rem); }
+      .mv-grid, .linhas-grid { gap: 28px; }
+    }
+
+    /* Desktop / laptop */
+    @media (max-width: 1200px) {
+      .container { padding: 0 22px; }
+      .hero .container { gap: 40px; }
+    }
+
+    /* Tablet / laptop pequeno */
+    @media (max-width: 1024px) {
+      section { padding: 84px 0; }
+      .hero { padding: 132px 0 104px; }
+      .sobre-grid { gap: 40px; }
+      .footer-grid { gap: 36px; }
+      .hero .container { gap: 32px; }
+    }
+
+    /* Nav desktop → hamburguer (folga extra p/ caber o link Vitrine sem apertar) */
+    @media (max-width: 1140px) {
+      nav > a:not(.btn-nav) { display: none; }
+      .menu-toggle { display: flex; }
+    }
+
+    /* Tablet retrato / telas menores */
+    @media (max-width: 900px) {
+      .sobre-grid, .contato-grid { grid-template-columns: 1fr; gap: 40px; }
+      .mv-grid, .linhas-grid { grid-template-columns: 1fr; }
+      .produtos-grid { grid-template-columns: repeat(2, 1fr); }
+      .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
+      .valores-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      .hero { padding: 124px 0 92px; }
+      section { padding: 76px 0; }
+    }
+
+    /* Mobile grande / tablet pequeno */
+    @media (max-width: 640px) {
+      .logo-link img { height: 46px; }
+      .container { padding: 0 18px; }
+      .hero { padding: 118px 0 80px; }
+      .hero h1 { font-size: clamp(2rem, 8.5vw, 2.6rem); }
+      .hero-slogan { font-size: 1.05rem; }
+      .hero-stats { gap: 22px; margin-top: 40px; padding-top: 26px; }
+      .hero-stat { flex: 1 1 45%; }
+      .hero-stat strong { font-size: 1.5rem; }
+      .valores-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+      .wa-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
+      .wa-float svg { width: 26px; height: 26px; }
+      #backTop { right: 20px; bottom: 92px; width: 44px; height: 44px; }
+      .contato-card { padding: 28px 22px; }
+      .section-title { font-size: 1.55rem; }
+      .section-header { margin-bottom: 44px; }
+      .mv-card, .linha-card, .produto-card { padding: 26px; }
+      .mv-grid, .linhas-grid { gap: 18px; }
+      .atuacao-banner { margin-top: 32px; }
+      .atuacao-banner-content { padding: 26px; }
+      .sobre-visual { min-height: 300px; }
+      .sobre-visual-card { left: 16px; bottom: 16px; padding: 12px 16px; }
+      .sobre-visual-card strong { font-size: 1.25rem; }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .produtos-grid { grid-template-columns: 1fr; }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .hero .container { gap: 28px; }
+      .hero-actions { gap: 10px; }
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+      .hero-actions .btn-secondary { padding: 13px 22px; }
+      .hero-badge { font-size: 0.7rem; padding: 6px 12px; }
+      .mv-card, .linha-card, .produto-card { padding: 22px; }
+      .contato-item { padding: 16px; gap: 12px; }
+      .contato-item span, .contato-item a { font-size: 0.88rem; }
+      .contato-card { padding: 24px 18px; }
+      .atuacao-banner { min-height: 220px; }
+      .mobile-nav { padding: 12px 16px 20px; }
+      .footer-bottom { font-size: 0.72rem; }
+      section { padding: 60px 0; }
+      .section-header { margin-bottom: 36px; }
+    }
+
+    /* Telas muito pequenas */
+    @media (max-width: 360px) {
+      .container { padding: 0 16px; }
+      .hero h1 { font-size: 1.9rem; }
+      .logo-link img { height: 42px; }
+      .header-inner { height: 76px; }
+      .mobile-nav { top: 76px; }
+      .hero-stats { gap: 16px; }
+      .contato-item .ci-icon { width: 38px; height: 38px; }
+      .contato-item .ci-icon svg { width: 18px; height: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="progress-bar" aria-hidden="true"></div>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+  <!-- HEADER -->
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo-link" aria-label="Sousa Fix Tecnologia em Implantes — página inicial">
+        <img src="assets/logo.png" alt="Sousa Fix Tecnologia em Implantes — Logo" fetchpriority="high">
+      </a>
+      <nav aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#atuacao">Atuação</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+        <a href="vitrine.html" class="nav-vitrine" aria-label="Acessar vitrine online de produtos">
+          <svg viewBox="0 0 24 24"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+          Vitrine
+        </a>
+        <a href="https://wa.me/5543996491066" class="btn-nav" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+    <a href="#inicio" class="mobile-link">Início</a>
+    <a href="#sobre" class="mobile-link">Sobre</a>
+    <a href="#atuacao" class="mobile-link">Atuação</a>
+    <a href="#produtos" class="mobile-link">Produtos</a>
+    <a href="#contato" class="mobile-link">Contato</a>
+    <a href="vitrine.html" class="nav-vitrine mobile-link" aria-label="Acessar vitrine online de produtos">
+      <svg viewBox="0 0 24 24"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+      Vitrine
+    </a>
+    <a href="https://wa.me/5543996491066" class="btn-nav mobile-link" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-label="Início">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg>
+            Tecnologia em Implantes
+          </span>
+          <h1>Sousa Fix <span>Componentes Odontológicos</span></h1>
+          <p class="hero-slogan">A excelência por trás de cada conexão</p>
+          <h2>Componentes protéticos, linha digital e linha de solda para implantodontia e prótese dentária. Qualidade, confiança e atendimento próximo para todo o Brasil.</h2>
+          <div class="hero-actions">
+            <a href="https://wa.me/5543996491066" class="btn-primary" aria-label="Fale conosco via WhatsApp" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Fale conosco
+            </a>
+            <a href="#produtos" class="btn-secondary" aria-label="Ver produtos">Ver produtos<span style="font-size:0.85rem">→</span></a>
+            <a href="vitrine.html" class="btn-secondary" aria-label="Acessar vitrine online de produtos">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+              Vitrine online
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/img/implant-hero.jpg" alt="Modelo anatômico de implante dentário mostrando dente, raiz e osso maxilar" fetchpriority="high">
+          <div class="hero-visual-badge">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#00A445" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Componentes protéticos de alta qualidade
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="sobre-grid">
+          <div class="sobre-text reveal-left">
+            <span class="section-tag">Quem somos</span>
+            <h2 class="section-title" id="sobre-title">Uma história construída sobre <span>conexões</span></h2>
+            <p class="section-subtitle">A história da Sousa Fix começou a partir da experiência no mercado odontológico e da percepção de uma necessidade muito clara: oferecer aos profissionais da área soluções protéticas de qualidade, com bom custo-benefício, confiança e atendimento próximo.</p>
+            <p class="section-subtitle" style="margin-top:14px;">Desde 2013, a empresa vem construindo sua trajetória com foco principalmente em implantodontia e prótese dentária, acompanhando de perto as necessidades de implantodontistas, protéticos e laboratórios. Hoje, atendemos profissionais de diferentes regiões do Brasil com produtos que acompanham a evolução do mercado odontológico.</p>
+            <p class="section-subtitle" style="margin-top:14px;">Mais do que acompanhar a evolução do mercado, buscamos participar ativamente dessa transformação, investindo em inovação e desenvolvimento de soluções capazes de contribuir para uma rotina mais prática, eficiente e segura.</p>
+            <div class="sobre-badges">
+              <span class="sobre-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Desde 2013</span>
+              <span class="sobre-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Atendimento em todo o Brasil</span>
+              <span class="sobre-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Foco em implantodontia</span>
+            </div>
+          </div>
+          <div class="sobre-visual reveal-right" role="img" aria-label="Sousa Fix — tecnologia em implantes dentários">
+            <img src="assets/img/sobre-historia.jpg" alt="Profissional demonstrando implante dentário em modelo de prótese" loading="lazy">
+            <div class="sobre-visual-card">
+              <strong>+10 anos</strong>
+              <span>de experiência no mercado odontológico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSÃO, VISÃO E VALORES -->
+    <section class="missao-visao" id="proposito" aria-labelledby="mv-title">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">Nosso propósito</span>
+          <h2 class="section-title" id="mv-title">Missão, visão e <span>valores</span></h2>
+          <p class="section-subtitle">O que nos move todos os dias e a direção que seguimos para transformar a rotina de quem trabalha com odontologia.</p>
+        </div>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <div class="mv-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Missão</h3>
+            <p>Facilitar e transformar a rotina de implantodontistas, protéticos e laboratórios por meio de componentes protéticos e soluções inovadoras, unindo qualidade, confiança, atendimento próximo e condições competitivas.</p>
+          </div>
+          <div class="mv-card">
+            <div class="mv-icon">
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Visão</h3>
+            <p>Ser uma das principais referências do Brasil em componentes protéticos e soluções para implantodontia e prótese dentária, reconhecida pela qualidade, inovação, excelência no atendimento e desenvolvimento de soluções que acompanham a evolução do mercado.</p>
+          </div>
+          <div class="mv-card">
+            <div class="mv-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            </div>
+            <h3>Valores</h3>
+            <p>Compromisso com o cliente, qualidade, inovação, honestidade e transparência, evolução constante e respeito — os princípios que guiam todas as nossas relações.</p>
+          </div>
+        </div>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <h4><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Compromisso com o cliente</h4>
+            <p>Entender suas necessidades, cumprir o que prometemos e construir relacionamentos que vão além da venda.</p>
+          </div>
+          <div class="valor-card">
+            <h4><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Qualidade</h4>
+            <p>Buscar excelência em nossos produtos, processos e atendimento, mantendo um padrão de confiança em tudo o que entregamos.</p>
+          </div>
+          <div class="valor-card">
+            <h4><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Inovação</h4>
+            <p>Pesquisar, desenvolver e buscar continuamente novas tecnologias e soluções que facilitem a rotina dos profissionais da odontologia.</p>
+          </div>
+          <div class="valor-card">
+            <h4><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Honestidade e transparência</h4>
+            <p>Conduzir todas as relações com ética, clareza e responsabilidade, fortalecendo a confiança de clientes, parceiros e colaboradores.</p>
+          </div>
+          <div class="valor-card">
+            <h4><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Evolução constante</h4>
+            <p>Aprender, questionar, aperfeiçoar processos e estar sempre abertos a novas ideias, tecnologias e oportunidades.</p>
+          </div>
+          <div class="valor-card">
+            <h4><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Respeito</h4>
+            <p>Valorizar as pessoas, suas experiências e diferentes formas de pensar, mantendo relações profissionais saudáveis, próximas e duradouras.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATUAÇÃO -->
+    <section class="atuacao" id="atuacao" aria-labelledby="atuacao-title">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">Mercado de atuação</span>
+          <h2 class="section-title" id="atuacao-title">Soluções para cada etapa do <span>trabalho odontológico</span></h2>
+          <p class="section-subtitle">A Sousa Fix atua no mercado odontológico com foco em implantodontia e prótese dentária, oferecendo soluções para diferentes etapas da rotina clínica e laboratorial.</p>
+        </div>
+        <div class="linhas-grid">
+          <div class="linha-card">
+            <div class="linha-icon">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Componentes analógicos</h3>
+            <p>Linha completa de componentes protéticos para diferentes sistemas de implantes, utilizados na prótese sobre implante.</p>
+            <ul class="linha-list">
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mini pilares e UCLAs</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Análogos e transferentes</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cicatrizadores e parafusos</li>
+            </ul>
+          </div>
+          <div class="linha-card">
+            <div class="linha-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h10"/><path d="M12 4v16"/></svg>
+            </div>
+            <h3>Linha digital</h3>
+            <p>Soluções voltadas ao fluxo digital odontológico, integrando clínica e laboratório com precisão e praticidade.</p>
+            <ul class="linha-list">
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ti Bases e Scan Bodies</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Análogos digitais</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Componentes para diferentes plataformas</li>
+            </ul>
+          </div>
+          <div class="linha-card">
+            <div class="linha-icon">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Linha de solda</h3>
+            <p>Soluções para laboratórios que trabalham com soldagem de barras de protocolo, do analógico ao fluxo digital.</p>
+            <ul class="linha-list">
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Máquinas de solda e UCLAs de solda</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Barras de titânio e fios de preenchimento</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Acessórios e consumíveis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="atuacao-banner">
+          <img src="assets/img/laboratorio.jpg" alt="Profissional de laboratório confeccionando prótese dentária" loading="lazy">
+          <div class="atuacao-banner-content">
+            <span class="section-tag">Precisão em cada detalhe</span>
+            <h3>Do analógico ao digital, da clínica ao laboratório</h3>
+            <p>Atendemos implantodontistas, protéticos e laboratórios de prótese dentária, oferecendo qualidade, variedade e soluções que acompanham a evolução do mercado odontológico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="produtos" id="produtos" aria-labelledby="produtos-title">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">O que oferecemos</span>
+          <h2 class="section-title" id="produtos-title">Produtos que <span>oferecemos</span></h2>
+          <p class="section-subtitle">Um portfólio completo para implantodontistas, protéticos e laboratórios de prótese dentária, dos processos convencionais às novas tecnologias aplicadas à odontologia.</p>
+        </div>
+        <div class="produtos-grid">
+          <div class="produto-card produto-card-img">
+            <div class="produto-img">
+              <img src="assets/img/componentes-analogicos.jpg" alt="Componentes protéticos metálicos para prótese sobre implante" loading="lazy">
+            </div>
+            <div class="produto-icon">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Componentes protéticos analógicos</h3>
+            <p>Linha completa para prótese sobre implante, atendendo diferentes sistemas e plataformas, como Cone Morse, Grand Morse, Hexágono Externo e Mini Pilar. Mini pilares, UCLAs, análogos, transferentes, cicatrizadores, cilindros de proteção e parafusos protéticos.</p>
+          </div>
+          <div class="produto-card produto-card-img">
+            <div class="produto-img">
+              <img src="assets/img/linha-digital.jpg" alt="Profissional examinando escaneamento 3D odontológico em tablet" loading="lazy">
+            </div>
+            <div class="produto-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h10"/><path d="M12 4v16"/></svg>
+            </div>
+            <h3>Linha digital</h3>
+            <p>Soluções desenvolvidas para acompanhar a evolução do fluxo digital odontológico, com precisão, praticidade e integração entre clínica e laboratório. Inclui Ti Bases, Scan Bodies, análogos para fluxo digital e componentes para diferentes plataformas de implantes.</p>
+          </div>
+          <div class="produto-card produto-card-img">
+            <div class="produto-img">
+              <img src="assets/img/linha-solda.jpg" alt="Soldagem de precisão com maçarico sobre bancada de trabalho" loading="lazy">
+            </div>
+            <div class="produto-icon">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Linha de solda</h3>
+            <p>Uma linha completa para laboratórios que trabalham ou desejam trabalhar com soldagem de barras e estruturas protéticas em titânio. Máquinas de solda, UCLAs de solda, barras de titânio, fios de preenchimento, acessórios e consumíveis.</p>
+          </div>
+          <div class="produto-card produto-card-img">
+            <div class="produto-img">
+              <img src="assets/img/lab-equip.jpg" alt="Equipamento de laboratório odontológico para prótese dentária" loading="lazy">
+            </div>
+            <div class="produto-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></svg>
+            </div>
+            <h3>Máquinas e equipamentos</h3>
+            <p>Equipamentos voltados à rotina protética, desenvolvidos para proporcionar mais praticidade, eficiência e tecnologia aos laboratórios. Entre eles, a Máquina de Solda WELD Prosthetic Solutions e a Caneta Elétrica NB Prosthetic Solutions.</p>
+          </div>
+          <div class="produto-card produto-card-img">
+            <div class="produto-img">
+              <img src="assets/img/ferramentas.jpg" alt="Instrumentos e ferramentas odontológicas organizados em bandeja" loading="lazy">
+            </div>
+            <div class="produto-icon">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Ferramentas e acessórios</h3>
+            <p>Ferramentas utilizadas no dia a dia de implantodontistas e protéticos, como chaves protéticas, chaves de ponta dupla, ferramentas sextavadas e quadradas, acessórios e demais instrumentos para manipulação de componentes protéticos.</p>
+          </div>
+          <div class="produto-card produto-card-img">
+            <div class="produto-img">
+              <img src="assets/img/solucoes-etapas.jpg" alt="Modelo demonstrativo de implante dentário com prótese" loading="lazy">
+            </div>
+            <div class="produto-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            </div>
+            <h3>Soluções para cada etapa</h3>
+            <p>Do analógico ao digital, dos componentes à soldagem, buscamos oferecer produtos que facilitem a rotina dos profissionais e acompanhem a constante evolução da implantodontia e da prótese dentária.</p>
+          </div>
+        </div>
+        <div class="produtos-cta">
+          <p>Fale com a nossa equipe e confira o portfólio completo.</p>
+          <a href="https://wa.me/5543996491066" class="btn-primary" aria-label="Falar com a equipe no WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar com a equipe
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VITRINE ONLINE -->
+    <section class="vitrine-promo" id="vitrine" aria-labelledby="vitrine-title">
+      <div class="container">
+        <div class="vitrine-grid">
+          <div class="vitrine-txt reveal-left">
+            <span class="section-tag">Vitrine online</span>
+            <h2 class="section-title" id="vitrine-title">Explore nosso catálogo na <span>Vitrine Digital</span></h2>
+            <p class="section-subtitle">Navegue por toda a nossa linha de componentes protéticos, linha digital e linha de solda, com fotos e detalhes de cada produto — de qualquer dispositivo, a qualquer hora.</p>
+            <ul class="vitrine-feats">
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Catálogo completo sempre atualizado</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Consulta rápida por implantodontistas, protéticos e laboratórios</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Acesso de qualquer dispositivo, sem cadastro</li>
+              <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Orçamento rápido direto pelo WhatsApp</li>
+            </ul>
+            <div class="vitrine-btns">
+              <a href="vitrine.html" class="btn-vitrine" aria-label="Acessar vitrine de produtos Sousa Fix">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+                Acessar vitrine
+              </a>
+              <a href="https://wa.me/5543996491066" class="btn-secondary" aria-label="Falar no WhatsApp" target="_blank" rel="noopener noreferrer" style="border-color:rgba(255,255,255,0.4)">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="vitrine-mock reveal-right">
+            <div class="vitrine-browser">
+              <div class="vitrine-browser-bar">
+                <span class="dot" style="background:#FF5F57;"></span>
+                <span class="dot" style="background:#FEBC2E;"></span>
+                <span class="dot" style="background:#28C840;"></span>
+                <div class="vitrine-browser-url">sousafix.egestor.com.br/vitrine/</div>
+              </div>
+              <div class="vitrine-browser-content">
+                <div>
+                  <div class="vb-icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+                  </div>
+                  <strong>Sousa Fix</strong>
+                  <span class="sub">Vitrine de produtos</span>
+                  <a href="vitrine.html" class="vb-cta" aria-label="Abrir vitrine">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M3 9h18v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V13h6v8"/></svg>
+                    Abrir vitrine
+                  </a>
+                </div>
+              </div>
+              <div class="vitrine-mock-overlay"><a href="vitrine.html" aria-label="Acessar vitrine online"></a></div>
+            </div>
+            <div class="vitrine-float" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg>
+              <span>3 linhas de produtos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos" id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">O que dizem sobre nós</span>
+          <h2 class="section-title" id="depoimentos-title">Depoimentos de quem <span>confia na Sousa Fix</span></h2>
+          <p class="section-subtitle">Implantodontistas, protéticos e laboratórios que já contam com o nosso atendimento e produtos.</p>
+        </div>
+        <div class="depoimentos-grid">
+          <div class="depoimento-card">
+            <div class="depoimento-quote-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/><path d="M19 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/></svg>
+            </div>
+            <p class="depoimento-text">"Comprei recentemente pela primeira vez e após postarem o pedido nos correios já me mandaram o código de rastreio, me mandaram mensagens a cada atualização, o que acaba ajudando muito com a programação de trabalhos."</p>
+            <div class="depoimento-author">
+              <div class="depoimento-avatar">PM</div>
+              <div>
+                <strong>Pedro Martins</strong>
+                <span>Protético</span>
+              </div>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-quote-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/><path d="M19 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/></svg>
+            </div>
+            <p class="depoimento-text">"Sempre que compro nessa empresa obtenho todo o acompanhamento do meu pedido, os vendedores sempre me mandam mensagens a cada atualização e sobre promoções disponíveis na semana!"</p>
+            <div class="depoimento-author">
+              <div class="depoimento-avatar">GB</div>
+              <div>
+                <strong>Guilherme Bueno</strong>
+                <span>Dentista</span>
+              </div>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-quote-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/><path d="M19 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/></svg>
+            </div>
+            <p class="depoimento-text">"Conheci a SousaFix através do meu protético e sempre compro com eles, o atendimento é excepcional e os valores são compatíveis com o mercado."</p>
+            <div class="depoimento-author">
+              <div class="depoimento-avatar">ML</div>
+              <div>
+                <strong>Maiara Lima</strong>
+                <span>Especialista em implantes</span>
+              </div>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-quote-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/><path d="M19 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/></svg>
+            </div>
+            <p class="depoimento-text">"Conheci a empresa pelo Instagram e fiz minha primeira compra, os vendedores são atenciosos e os produtos de qualidade."</p>
+            <div class="depoimento-author">
+              <div class="depoimento-avatar">LL</div>
+              <div>
+                <strong>Larissa Lemes</strong>
+                <span>TPD</span>
+              </div>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-quote-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/><path d="M19 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/></svg>
+            </div>
+            <p class="depoimento-text">"Um colega de profissão me indicou a empresa, compro a pouco tempo e desde então virei cliente fiel! Vendedores atenciosos e os preços são excelentes."</p>
+            <div class="depoimento-author">
+              <div class="depoimento-avatar">FO</div>
+              <div>
+                <strong>Fernando de Oliveira</strong>
+                <span>Implantodontista</span>
+              </div>
+            </div>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-quote-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/><path d="M19 7h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v3l4-3"/></svg>
+            </div>
+            <p class="depoimento-text">"Comprei pelo site e fiquei 100% satisfeito, consegui tirar todas as minhas dúvidas pelo WhatsApp e fui muito bem atendido."</p>
+            <div class="depoimento-author">
+              <div class="depoimento-avatar">MO</div>
+              <div>
+                <strong>Marcelo de Oliveira</strong>
+                <span>TPD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA WHATSAPP -->
+    <section class="cta-wa" id="contato" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Pronto para <span style="color:#66FFA6">conectar</span> com qualidade?</h2>
+        <p>Fale com a Sousa Fix e conheça as soluções ideais para a sua clínica ou laboratório. Atendimento rápido, próximo e especializado.</p>
+        <a href="https://wa.me/5543996491066" class="btn-primary" aria-label="Fale conosco via WhatsApp" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato-info" aria-labelledby="contato-title">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">Fale conosco</span>
+          <h2 class="section-title" id="contato-title">Entre em <span>contato</span></h2>
+          <p class="section-subtitle">Tire suas dúvidas, solicite um orçamento ou fale sobre uma parceria. Estamos prontos para te atender.</p>
+        </div>
+        <div class="contato-grid">
+          <div class="contato-info">
+            <h3>Nossos canais de atendimento</h3>
+            <p>Atendimento dedicado para implantodontistas, protéticos e laboratórios de todo o Brasil.</p>
+            <div class="contato-info-list">
+              <div class="contato-item">
+                <div class="ci-icon">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <strong>Telefone / WhatsApp</strong>
+                  <span><a href="https://wa.me/5543996491066" target="_blank" rel="noopener noreferrer">(43) 99649-1066</a></span>
+                </div>
+              </div>
+              <div class="contato-item">
+                <div class="ci-icon">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <strong>E-mail</strong>
+                  <span><a href="mailto:atendimento@sousafix.com.br">atendimento@sousafix.com.br</a></span>
+                </div>
+              </div>
+              <div class="contato-item">
+                <div class="ci-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <strong>Endereço</strong>
+                  <span>Rua Marechal Deodoro da Fonseca, 446, Vila Rennó, Santo Antônio da Platina – PR, CEP 86.430-000</span>
+                </div>
+              </div>
+              <div class="contato-item">
+                <div class="ci-icon">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <strong>Horário de atendimento</strong>
+                  <span>Segunda a sexta, das 08:00 às 17:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contato-card">
+            <h3>Envie sua mensagem</h3>
+            <p>Preencha o formulário e fale direto com a nossa equipe pelo WhatsApp.</p>
+            <form id="contactForm" novalidate>
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+              <label for="empresa">Profissão ou empresa</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Implantodontista, protético, laboratório..." autocomplete="organization">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+              <button type="submit" class="btn-primary">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Enviar pelo WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Sousa Fix Tecnologia em Implantes — Logo" loading="lazy">
+          </div>
+          <p>Componentes protéticos, linha digital e linha de solda para implantodontia e prótese dentária. Qualidade, confiança e atendimento próximo para todo o Brasil.</p>
+          <div class="social">
+            <a href="https://www.facebook.com/people/Sousa-Fix/61556200397217/" aria-label="Facebook da Sousa Fix" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sousa.fix/" aria-label="Instagram da Sousa Fix" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37a4 4 0 1 1-7.914 1.174A4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://wa.me/5543996491066" aria-label="WhatsApp da Sousa Fix" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#atuacao">Atuação</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="vitrine.html">Vitrine online</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato-info">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="https://wa.me/5543996491066" target="_blank" rel="noopener noreferrer">(43) 99649-1066</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:atendimento@sousafix.com.br">atendimento@sousafix.com.br</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Segunda a sexta, das 08:00 às 17:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Sousa Fix Tecnologia em Implantes — CNPJ: 20.752.961/0001-60</span>
+        <span>Desenvolvido por <strong style="color:rgba(255,255,255,0.55)">MonteSite</strong></span>
+      </div>
+    </div>
+
+    <!-- Rodapé MonteSite - Atualização Automática -->
+    <div id="montesite-footer-badge"></div>
+    <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+  </footer>
+
+  <!-- VOLTAR AO TOPO -->
+  <button id="backTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5543996491066" class="wa-float" aria-label="Falar no WhatsApp" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    window.addEventListener('load', function() { document.body.classList.add('loaded'); });
+
+    /* ── SCROLL: HEADER / PROGRESSO / VOLTAR AO TOPO ── */
+    const header = document.getElementById('header');
+    const progressBar = document.getElementById('progress-bar');
+    const backTop = document.getElementById('backTop');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let ticking = false;
+    const onScroll = () => {
+      const y = window.scrollY;
+      header.classList.toggle('scrolled', y > 10);
+      if (backTop) backTop.classList.toggle('show', y > 500);
+      if (progressBar) {
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - window.innerHeight;
+        progressBar.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      }
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+    }, { passive: true });
+    onScroll();
+    if (backTop) {
+      backTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+    }
+
+    /* ── CONTADORES ANIMADOS (HERO) ── */
+    const statNums = document.querySelectorAll('.stat-num');
+    if (statNums.length) {
+      const countObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          countObs.unobserve(e.target);
+          const el = e.target;
+          const target = parseInt(el.dataset.count, 10);
+          const suffix = el.dataset.suffix || '';
+          if (reduceMotion) { el.textContent = target + suffix; return; }
+          const dur = 1600;
+          const ease = t => 1 - Math.pow(1 - t, 3);
+          const tick = now => {
+            const p = Math.min((now - start) / dur, 1);
+            el.textContent = Math.round(ease(p) * target) + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          const start = performance.now();
+          requestAnimationFrame(tick);
+        });
+      }, { threshold: 0.5 });
+      statNums.forEach(el => countObs.observe(el));
+    }
+
+    /* ── TILT 3D NOS CARDS ── */
+    if (!reduceMotion) {
+      document.querySelectorAll('.produto-card, .linha-card').forEach(card => {
+        card.classList.add('tilt');
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - 0.5;
+          const py = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform =
+            'perspective(900px) rotateX(' + (-py * 6).toFixed(2) + 'deg) rotateY(' + (px * 6).toFixed(2) + 'deg) translateY(-5px)';
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+      });
+    }
+
+    /* ── MENU MOBILE ── */
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mobileNav.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    /* ── NAV ATIVA POR ÂNCORA ── */
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"], .mobile-nav a[href^="#"]');
+    const spyObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(l => l.classList.toggle('nav-active', l.getAttribute('href') === '#' + e.target.id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => spyObs.observe(s));
+
+    /* ── SCROLL REVEAL ── */
+    const revealConfig = [
+      { sel: '.section-header',      dir: 'up' },
+      { sel: '.sobre-text',          dir: 'left' },
+      { sel: '.sobre-visual',        dir: 'right' },
+      { sel: '.vitrine-txt',         dir: 'left' },
+      { sel: '.vitrine-mock',        dir: 'right' },
+      { sel: '.mv-card',             dir: 'up',  stagger: true },
+      { sel: '.valor-card',          dir: 'up',  stagger: true },
+      { sel: '.linha-card',          dir: 'up',  stagger: true },
+      { sel: '.produto-card',        dir: 'up',  stagger: true },
+      { sel: '.depoimento-card',     dir: 'up',  stagger: true },
+      { sel: '.contato-info',        dir: 'left' },
+      { sel: '.contato-card',        dir: 'right' },
+    ];
+    const delays = ['', 'delay-1', 'delay-2', 'delay-3'];
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revObs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealConfig.forEach(({ sel, dir, stagger }) => {
+      document.querySelectorAll(sel).forEach((el, i) => {
+        el.classList.add('reveal-' + dir);
+        if (stagger && delays[i % 4]) el.classList.add(delays[i % 4]);
+        revObs.observe(el);
+      });
+    });
+
+    /* ── SECTION TITLE UNDERLINE ── */
+    const titleObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('line-active'); titleObs.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.section-title').forEach(el => titleObs.observe(el));
+
+    /* ── FORMULÁRIO → WHATSAPP ── */
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(ev) {
+        ev.preventDefault();
+        const nome = document.getElementById('nome').value.trim();
+        const empresa = document.getElementById('empresa').value.trim();
+        const msg = document.getElementById('mensagem').value.trim();
+        if (!nome || !msg) return;
+        const texto = `Olá! Meu nome é ${nome}.` +
+          (empresa ? `\nSou ${empresa}.` : '') +
+          `\n\n${msg}`;
+        const url = 'https://wa.me/5543996491066?text=' + encodeURIComponent(texto);
+        window.open(url, '_blank', 'noopener');
+      });
+    }
+  </script>
+</body>
+</html>
