@@ -445,6 +445,54 @@
     .produto-card-img .produto-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
     .produto-card-img:hover .produto-img img { transform: scale(1.06); }
     .produto-card-img .produto-icon { position: relative; z-index: 2; margin: -20px 0 14px 24px; }
+    .btn-catalogo {
+      display: inline-flex; align-items: center; gap: 8px; margin: 18px 24px 0;
+      padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--green);
+      background: transparent; color: var(--green-dark); font: 600 0.88rem 'Inter', sans-serif;
+      cursor: pointer; transition: background 0.25s, color 0.25s;
+    }
+    .btn-catalogo svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .btn-catalogo:hover { background: var(--green); color: var(--white); }
+    .catalogo-modal {
+      position: fixed; inset: 0; z-index: 2000; display: none;
+      background: rgba(0,20,10,0.92); align-items: center; justify-content: center;
+      padding: 56px 64px;
+    }
+    .catalogo-modal.open { display: flex; }
+    .catalogo-modal figure { margin: 0; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .catalogo-modal img { max-width: min(100%, 900px); max-height: calc(100vh - 140px); width: auto; height: auto; border-radius: 8px; background: #fff; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .catalogo-modal figcaption { color: #fff; font-size: 0.9rem; opacity: 0.85; }
+    .catalogo-btn {
+      position: absolute; width: 46px; height: 46px; border-radius: 50%; border: none;
+      background: rgba(255,255,255,0.14); color: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+    }
+    .catalogo-btn:hover { background: var(--green); }
+    .catalogo-btn svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .catalogo-close { top: 14px; right: 14px; }
+    .catalogo-prev { left: 10px; top: 50%; transform: translateY(-50%); }
+    .catalogo-next { right: 10px; top: 50%; transform: translateY(-50%); }
+    @media (max-width: 600px) {
+      .catalogo-modal { padding: 64px 12px 76px; }
+      .catalogo-modal img { max-height: calc(100vh - 170px); }
+      .catalogo-prev, .catalogo-next { top: auto; bottom: 14px; transform: none; }
+      .catalogo-prev { left: calc(50% - 56px); }
+      .catalogo-next { right: calc(50% - 56px); }
+    }
+    .catalogo-galeria { margin-top: 56px; text-align: center; }
+    .catalogo-galeria h3 { font-family: 'Baloo 2', sans-serif; font-size: 1.4rem; color: var(--gray-900); margin-bottom: 6px; }
+    .catalogo-galeria > p { font-size: 0.92rem; color: var(--text-light); margin-bottom: 24px; }
+    .catalogo-thumbs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+    .catalogo-thumb {
+      display: block; padding: 0; border: 1px solid var(--gray-200); border-radius: var(--radius);
+      background: var(--white); overflow: hidden; cursor: zoom-in; text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .catalogo-thumb:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green); }
+    .catalogo-thumb img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
+    .catalogo-thumb span { display: block; padding: 10px 12px; font: 600 0.82rem 'Inter', sans-serif; color: var(--green-dark); }
+    @media (max-width: 900px) { .catalogo-thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 560px) { .catalogo-thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
     .produtos-cta { text-align: center; margin-top: 48px; }
     .produtos-cta p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; }
 
@@ -1109,17 +1157,21 @@
         <div class="produtos-grid">
           <div class="produto-card produto-card-img">
             <div class="produto-img">
-              <img src="assets/img/componentes-analogicos.jpg" alt="Componentes protéticos metálicos para prótese sobre implante" loading="lazy">
+              <img src="assets/img/componentes-analogicos.jpg" alt="Ucla HE Titânio, Mini Pilar e Transfer HE — componentes protéticos Sousa Fix" loading="lazy">
             </div>
             <div class="produto-icon">
               <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
             </div>
             <h3>Componentes protéticos analógicos</h3>
             <p>Linha completa para prótese sobre implante, atendendo diferentes sistemas e plataformas, como Cone Morse, Grand Morse, Hexágono Externo e Mini Pilar. Mini pilares, UCLAs, análogos, transferentes, cicatrizadores, cilindros de proteção e parafusos protéticos.</p>
+            <button type="button" class="btn-catalogo" data-catalogo="analogicos" aria-label="Ver catálogo de componentes protéticos analógicos">
+              <svg viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>
+              Ver catálogo
+            </button>
           </div>
           <div class="produto-card produto-card-img">
             <div class="produto-img">
-              <img src="assets/img/linha-digital.jpg" alt="Profissional examinando escaneamento 3D odontológico em tablet" loading="lazy">
+              <img src="assets/img/linha-digital.jpg" alt="Dentista realizando escaneamento intraoral com o modelo 3D da arcada exibido no computador" loading="lazy">
             </div>
             <div class="produto-icon">
               <svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h10"/><path d="M12 4v16"/></svg>
@@ -1129,13 +1181,17 @@
           </div>
           <div class="produto-card produto-card-img">
             <div class="produto-img">
-              <img src="assets/img/linha-solda.jpg" alt="Soldagem de precisão com maçarico sobre bancada de trabalho" loading="lazy">
+              <img src="assets/img/linha-solda.jpg" alt="Máquina de solda Sousa Fix com caneta de soldagem, pedal e cilindro de argônio sobre bancada" loading="lazy">
             </div>
             <div class="produto-icon">
               <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
             <h3>Linha de solda</h3>
             <p>Uma linha completa para laboratórios que trabalham ou desejam trabalhar com soldagem de barras e estruturas protéticas em titânio. Máquinas de solda, UCLAs de solda, barras de titânio, fios de preenchimento, acessórios e consumíveis.</p>
+            <button type="button" class="btn-catalogo" data-catalogo="solda" aria-label="Ver catálogo da linha de solda">
+              <svg viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>
+              Ver catálogo
+            </button>
           </div>
           <div class="produto-card produto-card-img">
             <div class="produto-img">
@@ -1159,13 +1215,39 @@
           </div>
           <div class="produto-card produto-card-img">
             <div class="produto-img">
-              <img src="assets/img/solucoes-etapas.jpg" alt="Modelo demonstrativo de implante dentário com prótese" loading="lazy">
+              <img src="assets/img/solucoes-etapas.jpg" alt="Prótese dentária finalizada sobre modelo de gesso em bancada de laboratório" loading="lazy">
             </div>
             <div class="produto-icon">
               <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
             </div>
             <h3>Soluções para cada etapa</h3>
             <p>Do analógico ao digital, dos componentes à soldagem, buscamos oferecer produtos que facilitem a rotina dos profissionais e acompanhem a constante evolução da implantodontia e da prótese dentária.</p>
+          </div>
+        </div>
+        <div class="catalogo-galeria">
+          <h3>Catálogo de produtos</h3>
+          <p>Clique em uma página para ampliar.</p>
+          <div class="catalogo-thumbs">
+            <button type="button" class="catalogo-thumb" data-catalogo="todos" data-pagina="0" aria-label="Ampliar catálogo: Componentes analógicos">
+              <img src="assets/img/catalogo/analogicos-1.jpg" alt="Página do catálogo Sousa Fix — Componentes analógicos" loading="lazy">
+              <span>Componentes analógicos</span>
+            </button>
+            <button type="button" class="catalogo-thumb" data-catalogo="todos" data-pagina="1" aria-label="Ampliar catálogo: Munhões, cicatrizadores e chaves">
+              <img src="assets/img/catalogo/analogicos-2.jpg" alt="Página do catálogo Sousa Fix — Munhões, cicatrizadores e chaves" loading="lazy">
+              <span>Munhões, cicatrizadores e chaves</span>
+            </button>
+            <button type="button" class="catalogo-thumb" data-catalogo="todos" data-pagina="2" aria-label="Ampliar catálogo: Análogos, UCLAs e pilares">
+              <img src="assets/img/catalogo/analogicos-3.jpg" alt="Página do catálogo Sousa Fix — Análogos, UCLAs e pilares" loading="lazy">
+              <span>Análogos, UCLAs e pilares</span>
+            </button>
+            <button type="button" class="catalogo-thumb" data-catalogo="todos" data-pagina="3" aria-label="Ampliar catálogo: Linha de solda">
+              <img src="assets/img/catalogo/solda-1.jpg" alt="Página do catálogo Sousa Fix — Linha de solda" loading="lazy">
+              <span>Linha de solda</span>
+            </button>
+            <button type="button" class="catalogo-thumb" data-catalogo="todos" data-pagina="4" aria-label="Ampliar catálogo: Linha de solda — barras e UCLAs">
+              <img src="assets/img/catalogo/solda-2.jpg" alt="Página do catálogo Sousa Fix — Linha de solda — barras e UCLAs" loading="lazy">
+              <span>Linha de solda — barras e UCLAs</span>
+            </button>
           </div>
         </div>
         <div class="produtos-cta">
@@ -1469,6 +1551,16 @@
 
     <!-- Rodapé MonteSite - Atualização Automática -->
     <div id="montesite-footer-badge"></div>
+
+  <div class="catalogo-modal" id="catalogoModal" role="dialog" aria-modal="true" aria-label="Catálogo de produtos">
+    <button type="button" class="catalogo-btn catalogo-close" aria-label="Fechar catálogo"><svg viewBox="0 0 24 24"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg></button>
+    <button type="button" class="catalogo-btn catalogo-prev" aria-label="Página anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <figure>
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button type="button" class="catalogo-btn catalogo-next" aria-label="Próxima página"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
+  </div>
     <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
   </footer>
 
@@ -1484,6 +1576,58 @@
 
   <script>
     window.addEventListener('load', function() { document.body.classList.add('loaded'); });
+
+    /* ── CATÁLOGOS (VISUALIZADOR) ── */
+    (function () {
+      const catalogos = {
+        analogicos: { nome: 'Componentes protéticos analógicos', pags: ['analogicos-1', 'analogicos-2', 'analogicos-3'] },
+        solda: { nome: 'Linha de solda', pags: ['solda-1', 'solda-2'] },
+        todos: { nome: 'Catálogo Sousa Fix', pags: ['analogicos-1', 'analogicos-2', 'analogicos-3', 'solda-1', 'solda-2'] }
+      };
+      const modal = document.getElementById('catalogoModal');
+      if (!modal) return;
+      const img = modal.querySelector('img');
+      const cap = modal.querySelector('figcaption');
+      const prev = modal.querySelector('.catalogo-prev');
+      const next = modal.querySelector('.catalogo-next');
+      let atual = null, idx = 0, origem = null;
+      const render = () => {
+        const n = atual.pags.length;
+        img.src = 'assets/img/catalogo/' + atual.pags[idx] + '.jpg';
+        img.alt = 'Catálogo Sousa Fix — ' + atual.nome + ', página ' + (idx + 1);
+        cap.textContent = atual.nome + ' · ' + (idx + 1) + ' / ' + n;
+        prev.style.display = next.style.display = n > 1 ? '' : 'none';
+      };
+      const abrir = (k, btn) => {
+        atual = catalogos[k]; idx = +(btn.dataset.pagina || 0); origem = btn;
+        render(); modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.catalogo-close').focus();
+      };
+      const fechar = () => {
+        modal.classList.remove('open'); document.body.style.overflow = '';
+        if (origem) origem.focus();
+      };
+      const mover = d => { idx = (idx + d + atual.pags.length) % atual.pags.length; render(); };
+      document.querySelectorAll('[data-catalogo]').forEach(b => b.addEventListener('click', () => abrir(b.dataset.catalogo, b)));
+      modal.querySelector('.catalogo-close').addEventListener('click', fechar);
+      prev.addEventListener('click', () => mover(-1));
+      next.addEventListener('click', () => mover(1));
+      modal.addEventListener('click', e => { if (e.target === modal) fechar(); });
+      document.addEventListener('keydown', e => {
+        if (!modal.classList.contains('open')) return;
+        if (e.key === 'Escape') fechar();
+        if (e.key === 'ArrowLeft') mover(-1);
+        if (e.key === 'ArrowRight') mover(1);
+      });
+      let x0 = null;
+      modal.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+      modal.addEventListener('touchend', e => {
+        if (x0 === null) return;
+        const dx = e.changedTouches[0].clientX - x0; x0 = null;
+        if (Math.abs(dx) > 50) mover(dx < 0 ? 1 : -1);
+      });
+    })();
 
     /* ── SCROLL: HEADER / PROGRESSO / VOLTAR AO TOPO ── */
     const header = document.getElementById('header');
